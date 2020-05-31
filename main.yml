@@ -1,0 +1,21 @@
+---
+- hosts: all
+
+  vars_files:
+    - default.config.yml
+
+  roles:
+    - role: geerlingguy.dotfiles
+      when: configure_dotfiles
+      tags: ['dotfiles']
+
+      
+- hosts: mac
+
+  vars_files:
+    - default.config.yml
+
+  roles:
+    - role: geerlingguy.homebrew
+      when: ansible_facts['os_family'] == "Darwin"
+      tags: ['homebrew']
