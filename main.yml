@@ -5,6 +5,8 @@
     - default.config.yml
 
   roles:
+    - role: geerlingguy.git
+      tags: ['dotfiles']
     - role: geerlingguy.dotfiles
       when: configure_dotfiles
       tags: ['dotfiles']
