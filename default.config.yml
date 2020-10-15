@@ -1,23 +1,17 @@
-
 ---
 downloads: ~/.ansible-downloads/
-
-configure_dotfiles: yes
-
+configure_dotfiles: true
 dotfiles_repo: https://github.com/dueyfinster/dotfiles.git
-dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/.dotfiles
 dotfiles_files:
   - .gitignore
-
 homebrew_installed_packages:
   - git
   - ssh-copy-id
-
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
-
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - docker

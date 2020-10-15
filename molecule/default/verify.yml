@@ -3,8 +3,8 @@
   hosts: all
 
   tasks:
-  - stat: path=~/.dotfiles
-  register: p
-
+  - name: "Stat Dotfiles Directory"
+    stat: path=~/.dotfiles
+    register: p
   - debug: msg="Dotfiles path exists and is a directory"
-  when: p.stat.isdir is defined and p.stat.isdir
+    when: p.stat.isdir is defined and p.stat.isdir
