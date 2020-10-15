@@ -28,7 +28,7 @@ before_install:
   - source .venv/bin/activate
   - pip3 install ansible
   - python -c "import ssl; print(ssl.OPENSSL_VERSION)"
-  - ansible-galaxy install -r requirements.yml -p ./roles
+  - ansible-galaxy install -r ./molecule/default/requirements.yml -p ./roles
   - deactivate
 
   # Uninstall existing Homebrew installation.
