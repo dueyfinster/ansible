@@ -54,7 +54,7 @@ install:
   # Add a hosts file.
   - sudo mkdir -p /etc/ansible
   - sudo touch /etc/ansible/hosts
-  - "echo -e '[local]\nlocalhost ansible_connection=local' | sudo tee -a /etc/ansible/hosts > /dev/null"
+  - "echo -e '[mac]\nlocalhost ansible_connection=local' | sudo tee -a /etc/ansible/hosts > /dev/null"
 
 script:
   # Check the role/playbook's syntax.
