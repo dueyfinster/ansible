@@ -25,5 +25,5 @@ steps:
       from_secret: ansible_ssh_key
     user:
       from_secret: ansible_user
-    password:
+    extra_vars:
       from_secret: ansible_password
