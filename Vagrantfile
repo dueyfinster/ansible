@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "db" do |db|
     db.vm.hostname = "orc-db.test"
-    db.vm.network :private_network, ip: "192.168.70.4"
+    db.vm.network :private_network, ip: "192.168.70.5"
   end
 
 end
