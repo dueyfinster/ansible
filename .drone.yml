@@ -20,7 +20,10 @@ steps:
     playbook: main.yml
     galaxy: molecule/default/requirements.yml
     inventory: inventory
+    become: true
     private_key:
       from_secret: ansible_ssh_key
     user:
       from_secret: ansible_user
+    password:
+      from_secret: ansible_password
