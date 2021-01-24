@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: Apply Ansible Playbook
+- name: Check Ansible Playbook Syntax
   image: plugins/ansible:1
   settings:
     playbook: main.yml
@@ -10,6 +10,17 @@ steps:
     inventory: inventory
     syntax_check: true
     private_key:
-      from_secret: ansible_private_key
+      from_secret: ansible_ssh_key
+    user:
+      from_secret: ansible_user
+
+- name: Apply Ansible Playbook
+  image: plugins/ansible:1
+  settings:
+    playbook: main.yml
+    galaxy: molecule/default/requirements.yml
+    inventory: inventory
+    private_key:
+      from_secret: ansible_ssh_key
     user:
       from_secret: ansible_user
