@@ -9,6 +9,7 @@ dotfiles_files:
   - .gitignore
   - .inputrc
   - .ssh/config
+  - .tmux.conf
   - .tmuxinator
   - .vim
   - .vimrc
