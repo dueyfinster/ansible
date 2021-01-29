@@ -5,9 +5,11 @@ dotfiles_repo: https://github.com/dueyfinster/dotfiles.git
 dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/.dotfiles
 dotfiles_files:
+  - .gitconfig
   - .gitignore
   - .inputrc
   - .ssh/config
+  - .tmuxinator
   - .vim
   - .vimrc
   - bin
