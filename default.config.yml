@@ -6,6 +6,10 @@ dotfiles_repo_accept_hostkey: true
 dotfiles_repo_local_destination: ~/.dotfiles
 dotfiles_files:
   - .gitignore
+  - .inputrc
+  - .ssh/config
+  - .vim
+  - .vimrc
   - bin
 homebrew_installed_packages:
   - coreutils
