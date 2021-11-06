@@ -2,8 +2,8 @@
 #127.0.0.1 ansible_connection=local
 
 [linux]
-192.168.1.3
-192.168.1.5
+192.168.1.3 ansible_python_interpreter=/bin/python3 scp_if_ssh=True
+192.168.1.141
 
 [multi:children]
 linux
